@@ -1,0 +1,48 @@
+.home {
+    color: black;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.diceImage img {
+    width: 600px;
+    height: 500px;
+   
+}
+
+.diceContent {
+    flex-direction: column;
+    position: relative;
+}
+
+.diceContent h1 {
+
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 144px;
+    text-align: left;
+
+}
+
+.diceContent button {
+    
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    line-height: 24px;
+    text-align: center;
+    width: 220px;
+    height: 44px;
+    padding: 10px 18px 10px 18px;
+    gap: 10px;
+    
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+
+}
