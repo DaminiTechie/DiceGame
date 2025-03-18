@@ -6,7 +6,8 @@ const Home = ({toggle}) => {
         <div className= {`${style.home} container`}>
           
             <div className={style.diceImage}>
-                <img src="/image/Dice.png" alt="diceimage"  />
+            <img src="/Dice.png" alt="diceimage" />
+
             </div>
            <div className={style.diceContent}>
                 <h1>DICE GAME</h1>
