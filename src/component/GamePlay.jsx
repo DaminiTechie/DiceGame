@@ -16,22 +16,29 @@ const GamePlay = () => {
   const generateRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
-
   const roleDice = () => {
     if (!selectedNumber) {
-      setError("You have not selected any number")
+      setError("You have not selected any number");
       return;
     }
 
     const randomNumber = generateRandomNumber(1, 6);
-    setCurrentDice((prev) => randomNumber);
+    setCurrentDice(randomNumber);
+    
 
+    
+  console.log("Selected Number:", selectedNumber);
+  console.log("Rolled Dice:", randomNumber);
     if (selectedNumber === randomNumber) {
       setScore((prev) => prev + randomNumber)
+     
     } else {
-      setScore((prev) => prev - 2)
+      setScore((prev) => (selectedNumber === randomNumber ? prev + randomNumber : prev - 2));
+     
     }
-    setSelectedNumber(undefined)
+    setTimeout(() => {
+      setSelectedNumber(undefined);
+    }, 100);
 
   };
   const resetScore = () => {
@@ -39,6 +46,7 @@ const GamePlay = () => {
   }
 
   return (
+    
     <MainContainer>
       <div className="Top_section">
         <TotalScore score={score} />
